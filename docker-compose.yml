@@ -1,0 +1,10 @@
+services:
+  mysql-8:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: "adopets"
+    ports:
+      - "3306:3306"
